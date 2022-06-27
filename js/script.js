@@ -17,13 +17,18 @@ const tab = document.querySelectorAll('.tab'),
         let n;
         let curItem = localStorage.getItem('active_tab');
         function showTabsContent(n=0) {
-        //  tabContent[n].classList.remove('hide');
+         tabContent[n].classList.remove('hide');
          tabContent[n].classList.add('show');
          tab[n].classList.add('active_tab');
         }
         
 hideTabsContent();
-showTabsContent(curItem);
+if(curItem){
+    showTabsContent(curItem);
+}else{
+    showTabsContent();
+}
+
 
 let tabsLength = 100 / tab.length;
 console.log(tabsLength);
