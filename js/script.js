@@ -17,7 +17,7 @@ const tab = document.querySelectorAll('.tab'),
         let n;
         let curItem = localStorage.getItem('active_tab');
         function showTabsContent(n=0) {
-         tabContent[n].classList.remove('hide');
+        //  tabContent[n].classList.remove('hide');
          tabContent[n].classList.add('show');
          tab[n].classList.add('active_tab');
         }
